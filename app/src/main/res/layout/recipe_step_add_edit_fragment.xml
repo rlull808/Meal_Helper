@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/recipe_add_edit_status_textview"
+        android:layout_alignParentTop="true" />
+
+    <TextView android:id="@+id/recipeNameTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/statusTextView"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipeStepEditText"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:maxLines="2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/statusTextView"
+         />
+    <TextView
+        android:id="@+id/recipeStepNumTextView"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignBaseline="@+id/recipeStepEditText"
+        />
+
+    <Button android:id="@+id/addStepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeStepEditText"
+        android:layout_alignLeft="@id/recipeStepEditText"
+        android:text="@string/addEditRecipeStepButton"
+        />
+    <Button android:id="@+id/editStepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeStepEditText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/editStepButton" />
+    <Button android:id="@id/clearTextButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/recipeStepEditText"
+        android:layout_alignRight="@id/recipeStepEditText"
+        android:text="@string/clearTextButton"/>
+
+
+
+    <TextView android:id="@+id/addTimerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editStepButton"
+        android:text="@string/addTimerLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"/>
+    <EditText
+        android:id="@+id/timerHoursEditText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addTimerLabel"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/addStepButton"
+        android:layout_marginRight="10dp"
+        android:hint="@string/timerHoursEditTextHint"
+        android:inputType="number"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:maxLength="2" />
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/timerMinutesEditText"
+        android:layout_below="@id/addTimerLabel"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignLeft="@id/addTimerLabel"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="mm"
+        />
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/timerSecondsEditText"
+        android:layout_below="@id/addTimerLabel"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/addTimerLabel"
+        android:layout_marginLeft="66dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:inputType="number"
+        android:maxLength="2"
+        android:hint="ss"/>
+    <Button android:id="@+id/addTimerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Timer"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/addTimerLabel"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        />
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/addTimerButton"
+        android:background="@android:color/black"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/recipeStepsListView"
+        android:layout_below="@+id/separatorLine"
+        android:descendantFocusability="blocksDescendants"/>
+
+
+
+
+</RelativeLayout>

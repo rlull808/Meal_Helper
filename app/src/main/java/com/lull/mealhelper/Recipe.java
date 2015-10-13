@@ -10,6 +10,38 @@ public class Recipe {
     private String RecipeName;
     private ArrayList<Ingredient> ingredients;
     private ArrayList<RecipeStep> recipeSteps;
+    private long timerAmount;
+
+    public Recipe(){
+        this.setTimerAmount(0);
+    }
+    public Recipe(String recipeName){
+        this.setRecipeName(recipeName);
+        this.setTimerAmount(0);
+    }
+    public Recipe(int recipeID, String recipeName, ArrayList<Ingredient> ingredients,
+                  ArrayList<RecipeStep> steps){
+        this.setRecipeID(recipeID);
+        this.setRecipeName(recipeName);
+        this.setIngredients(ingredients);
+        this.setRecipeSteps(steps);
+        this.setTimerAmount(0);
+    }
+    public Recipe(int recipeID, String recipeName, ArrayList<Ingredient> ingredients,
+                  ArrayList<RecipeStep> steps, long timerAmount){
+        this.setRecipeID(recipeID);
+        this.setRecipeName(recipeName);
+        this.setIngredients(ingredients);
+        this.setRecipeSteps(steps);
+        this.setTimerAmount(timerAmount);
+    }
+    public long getTimerAmount() {
+        return timerAmount;
+    }
+
+    public void setTimerAmount(long timerAmount) {
+        this.timerAmount = timerAmount;
+    }
 
     public ArrayList<Ingredient> getIngredients() {
         return ingredients;

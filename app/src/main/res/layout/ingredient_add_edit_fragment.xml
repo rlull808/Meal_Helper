@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/addEditIngredientsStatusText"
+        android:layout_alignParentTop="true"/>
+    <TextView android:id="@+id/ingredientNumTextView"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredientEditText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="5dp"
+        android:maxLines="2"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="@string/ingredientNameHint"
+        android:layout_below="@+id/statusTextView"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingredientDescriptionEditText"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="10dp"
+        android:maxLines="2"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="italic"
+        android:hint="@string/ingredientDescriptionHint"
+        android:layout_below="@+id/ingredientEditText"/>
+
+    <Button android:id="@+id/addIngredientButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ingredientDescriptionEditText"
+        android:layout_alignLeft="@+id/ingredientDescriptionEditText"
+        android:layout_marginBottom="10dp"
+        android:text="@string/addEditIngredientButton"
+        />
+    <Button android:id="@+id/saveEditIngredientButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ingredientDescriptionEditText"
+        android:text="@string/saveEditIngredientButton" />
+    <Button android:id="@+id/clearTextButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/ingredientDescriptionEditText"
+        android:layout_alignRight="@id/ingredientDescriptionEditText"
+        android:text="Clear Text" />
+    <View
+        android:id="@+id/separatorLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/addIngredientButton"
+        android:background="@android:color/black"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/ingredientListView"
+        android:layout_below="@id/separatorLine"
+        android:descendantFocusability="blocksDescendants"/>
+
+
+</RelativeLayout>

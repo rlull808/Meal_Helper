@@ -19,21 +19,17 @@ public class IngredientLayout extends RelativeLayout {
     private MealHelperDB db;
     private Context context;
 
-
-    public IngredientLayout(Context context) {
-        super(context);
-    }
-
-    public IngredientLayout(Context context, Ingredient ingred) {
-        super(context);
+    public IngredientLayout(Context Icontext /*, Ingredient ingred*/) {
+        super(Icontext);
 
         // set context and get db object
-        this.context = context;
+        this.context = Icontext;
         db = new MealHelperDB(context);
 
         //inflate layout
         LayoutInflater inflater = (LayoutInflater)
                 context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.ingredient_row, this, true);
 
         //widget references
         checkboxComplete = (CheckBox) findViewById(R.id.checkboxComplete);
@@ -42,14 +38,15 @@ public class IngredientLayout extends RelativeLayout {
 
     }
 
-    public void setIngredientText(Ingredient i){
-        ingredient = i;
+    public void setIngredientText(Ingredient ing){
+        ingredient = ing;
 
         ingredientTextView.setText(ingredient.getIngredientTitle());
-        if (ingredient.getIngredientDesc().equalsIgnoreCase("")) {
-            ingredientDescription.setVisibility(GONE);
+        if (ingredient.getIngredientDesc().equals(""))
+        {
+            ingredientDescription.setText("");
         }
-        else{
+        else {
             ingredientDescription.setText(ingredient.getIngredientDesc());
         }
     }

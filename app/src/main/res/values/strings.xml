@@ -1,6 +1,22 @@
 <resources>
     <string name="app_name">Meal Helper</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_recipe">RecipeActivity</string>
+    <string name="mainBannerTextView">Your Recipes</string>
+    <string name="viewRecipeButton">Look at Recipe</string>
+    <string name="recipeViewButton">Look at Recipe</string>
+    <string name="addEditIngredientsStatusText">Adding / Editing Ingredients</string>
+    <string name="recipe_add_edit_status_textview">Adding / Editing Recipe Steps</string>
+    <string name="addEditRecipeStepButton">Add New</string>
+    <string name="ingredientNameHint">ingredient name</string>
+    <string name="ingredientDescriptionHint">1 cup, chopped, sliced etc…</string>
+    <string name="addEditIngredientButton">Add New</string>
+    <string name="saveEditIngredientButton">Save Edit</string>
+    <string name="timerHoursEditTextHint">hh</string>
+    <string name="editStepButton">Edit Step</string>
+    <string name="clearTextButton">Clear Text</string>
+    <string name="main_NewRecipeItem">New Recipe</string>
+    <string name="addTimerLabel">Set a Cooking Timer</string>
+    <string name="timerTextViewDefaultAmount">00:00:00</string>
 </resources>

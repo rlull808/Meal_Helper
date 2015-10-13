@@ -11,22 +11,17 @@ public class RecipeStep {
     private int stepMealID;
     private int stepNumber;
     private String stepInstruction;
-    private Boolean stepNeedsTimer;
-    private long stepTimerMillis;
 
     public RecipeStep(){
-        this.stepNeedsTimer = false;
-        this.stepTimerMillis = 0;
-
+        this.stepID = -1;
     }
 
-    public RecipeStep(int stepID, int stepMealID, int stepNum, String stepInst, Boolean needsTimer, long timerMillis){
+    public RecipeStep(int stepID, int stepMealID, int stepNum, String stepInst){
         this.stepID = stepID;
         this.stepMealID = stepMealID;
         this.stepNumber = stepNum;
         this.stepInstruction = stepInst;
-        this.stepNeedsTimer = needsTimer;
-        this.stepTimerMillis = timerMillis;
+
     }
 
     public int getStepMealID() {
@@ -55,22 +50,6 @@ public class RecipeStep {
 
     public void setStepInstruction(String stepInstruction) {
         this.stepInstruction = stepInstruction;
-    }
-
-    public Boolean getStepNeedsTimer() {
-        return stepNeedsTimer;
-    }
-
-    public void setStepNeedsTimer(Boolean needsTimer) {
-        this.stepNeedsTimer = needsTimer;
-    }
-
-    public long getStepTimerMillis() {
-        return stepTimerMillis;
-    }
-
-    public void setStepTimerMillis(long timerMillis){
-        this.stepTimerMillis = timerMillis;
     }
 }
 

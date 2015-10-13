@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView android:id="@+id/stepNumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkboxComplete"
+        android:layout_alignLeft="@+id/stepNumTextView"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stepTextView"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:layout_marginLeft="50dp"
+        android:textSize="20dp"
+        android:text="Sample Text"
+        android:layout_alignParentTop="true"
+
+        />
+
+
+</RelativeLayout>

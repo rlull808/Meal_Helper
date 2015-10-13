@@ -4,26 +4,16 @@ package com.lull.mealhelper;
  * Created by Bob Lull on 9/27/2015.
  */
 public class Ingredient {
-  /*  public static final String INGRED_ID = "ingredientId";
-    public static final int INGRED_ID_COL = 0;
-
-    public static final String INGRED_MEAL_ID = "meal_id";
-    public static final int INGRED_MEAL_ID_COL = 1;
-
-    public static final String INGRED_NUM = "ingredientNum";
-    public static final int INGRED_NUM_COL = 2;
-
-    public static final String INGRED_TITLE = "ingredientTitle";
-    public static final int INGRED_TITLE_COL = 3;
-
-    public static final String INGRED_DESC = "ingredientDesc";
-    public static final int INGRED_DESC_COL = 4; */
 
     private int ingredientID;
     private int mealID;
     private int ingredientNum;
     private String ingredientTitle;
     private String ingredientDesc;
+
+    public Ingredient(){
+        ingredientID = -1;
+    }
 
     public int getIngredientID() {
         return ingredientID;
@@ -64,4 +54,7 @@ public class Ingredient {
     public void setIngredientDesc(String ingredientDesc) {
         this.ingredientDesc = ingredientDesc;
     }
+
 }
+
+
